@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: adesk-api
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn adesk_api:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
