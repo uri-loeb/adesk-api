@@ -30,7 +30,7 @@ def generate_ads():
         # טקסט שיווקי
         try:
             copy_prompt = f"Write a creative, engaging ad for the following product in exactly 50 words. Product: {product}"
-                gpt_response = openai.ChatCompletion.create(
+            gpt_response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are a creative marketing copywriter."},
@@ -59,25 +59,5 @@ def generate_ads():
 
         # תמונה
         try:
-    image_response = openai.Image.create(
-        prompt=f"...",
-        size=dalle_size,
-        n=1,
-        response_format="url"
-    )
-    image_url = image_response["data"][0]["url"]
-except Exception as e:
-    print("⚠️ Image fallback:", e)
-    image_url = f"https://via.placeholder.com/{dimensions}?text=Ad+{i+1}+for+{product.replace(' ', '+')}"
-
-
-        ads.append({
-            "image": image_url,
-            "text": full_text,
-            "dimensions": dimensions
-        })
-
-    return jsonify(ads)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+            image_response = openai.Image.create(
+                prompt=f"Advertising im
