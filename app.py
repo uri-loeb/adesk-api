@@ -30,7 +30,7 @@ def generate_ads():
         # 1. טקסט שיווקי
         copy_prompt = f"Write a creative, engaging ad for the following product in exactly 50 words. Product: {product}"
         gpt_response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a creative marketing copywriter."},
                 {"role": "user", "content": copy_prompt}
