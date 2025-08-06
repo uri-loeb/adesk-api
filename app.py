@@ -59,16 +59,17 @@ def generate_ads():
 
         # תמונה
         try:
-            image_response = openai.Image.create(
-                prompt=f"Advertising image for: {headline}. Show the headline text in the image. Marketing style. Realistic composition.",
-                size=dalle_size,
-                n=1,
-                response_format="url"
-            )
-            image_url = image_response["data"][0]["url"]
-        except Exception as e:
-            print("⚠️ Image fallback:", e)
-            image_url = f"https://via.placeholder.com/{dimensions}?text=Ad+{i+1}+for+{product.replace(' ', '+')}"
+    image_response = openai.Image.create(
+        prompt=f"...",
+        size=dalle_size,
+        n=1,
+        response_format="url"
+    )
+    image_url = image_response["data"][0]["url"]
+except Exception as e:
+    print("⚠️ Image fallback:", e)
+    image_url = f"https://via.placeholder.com/{dimensions}?text=Ad+{i+1}+for+{product.replace(' ', '+')}"
+
 
         ads.append({
             "image": image_url,
