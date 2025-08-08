@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADesk – Secure Demo Paywall</title>
+  <link rel="stylesheet" href="/static/stripe.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <div class="logo">AD</div>
+      <div class="title-wrap">
+        <h1>ADesk – Secure Demo</h1>
+        <p class="sub">Get 24‑hour access to the ad generator iframe after a test payment.</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="features">
+        <div class="feat">✅ Unique access token per user</div>
+        <div class="feat">⏱️ 24‑hour expiry</div>
+        <div class="feat">🧊 Ice‑themed demo iframe</div>
+        <div class="feat">🛡️ Server‑side protection</div>
+      </div>
+      <div class="cta">
+        <button class="pay" id="payBtn">Pay $1.00 (Stripe Test)</button>
+        <div class="note">Use test card <b>4242 4242 4242 4242</b>, any future date, any CVC.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/stripe.js"></script>
+</body>
+</html>
