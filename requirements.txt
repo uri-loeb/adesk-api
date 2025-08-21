@@ -1,7 +1,0 @@
-flask
-flask-cors
-gunicorn
-stripe
-openai==0.28
-requests
-reportlab
