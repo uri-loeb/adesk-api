@@ -1,0 +1,7 @@
+flask
+flask-cors
+stripe
+itsdangerous
+gunicorn
+Pillow
+reportlab
