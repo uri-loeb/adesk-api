@@ -1,4 +1,0 @@
-flask==3.0.3
-stripe==9.8.0
-gunicorn==22.0.0
-pillow==10.3.0
